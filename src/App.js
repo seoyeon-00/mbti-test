@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./components/main";
 import Testpage from "./components/testpage";
 import Resultpage from "./components/resultpage";
+import GlobalStyles from "./styles/GlobalStyles";
+import FontHelmet from "./styles/fontHelmet";
 
 function App() {
   const [EI, setEI] = useState(0);
@@ -10,37 +12,40 @@ function App() {
   const [TF, setTF] = useState(0);
   const [JP, setJP] = useState(0);
 
-  let [datas, setDatas] = useState("");
   let [MBTI, setMBTI] = useState("");
 
   useEffect(() => {
     let data = [];
-    if(EI > 0){
+    if (EI > 0) {
       data.push("E");
-    } else if(EI < 0){
+    } else if (EI < 0) {
       data.push("I");
     }
-    if(SN > 0){
+    if (SN > 0) {
       data.push("S");
-    } else if(SN < 0){
+    } else if (SN < 0) {
       data.push("N");
     }
-    if(TF > 0){
+    if (TF > 0) {
       data.push("T");
-    } else if(TF < 0){
+    } else if (TF < 0) {
       data.push("F");
     }
-    if(JP > 0){
+    if (JP > 0) {
       data.push("J");
-    } else if(EI < 0){
+    } else if (JP < 0) {
       data.push("P");
     }
 
-    setDatas(data);
-  },[]);
+    setMBTI(data);
+  }, [EI, SN, TF, JP]);
+
+  console.log(MBTI);
 
   return (
     <BrowserRouter>
+      <GlobalStyles />
+      <FontHelmet />
       <Routes>
         <Route
           path="/"
@@ -63,7 +68,10 @@ function App() {
             />
           }
         />
-        <Route MBTI={MBTI} path="/resultpage" element={<Resultpage />} />
+        <Route
+          path="/resultpage"
+          element={<Resultpage MBTI={MBTI} setMBTI={setMBTI} />}
+        />
       </Routes>
     </BrowserRouter>
   );
