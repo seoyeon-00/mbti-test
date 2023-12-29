@@ -20,7 +20,7 @@ function Resultpage({ MBTI, setMBTI }) {
     return () => clearTimeout(LoadingTimeout);
   }, []);
 
-  if (!loading) {
+  if (loading) {
     return <Loading></Loading>;
   }
 
@@ -35,6 +35,7 @@ function Resultpage({ MBTI, setMBTI }) {
       </Title>
       <Content>{data[MBTI.join("")].content}</Content>
       <Button
+        color={`${theme.subColor}`}
         onClick={() => {
           navigate("/");
           setMBTI("");
