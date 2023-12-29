@@ -7,6 +7,7 @@ function Loading() {
   return (
     <Container>
       <ClipLoader color="#3fbb18" size={120} />
+      <p className="text">Loading</p>
     </Container>
   );
 }
@@ -16,8 +17,15 @@ const Container = styled.div`
   height: 100vh;
   box-sizing: border-box;
 
-  padding: 120px 30px;
+  padding: 150px 30px;
   text-align: center;
+
+  .text {
+    margin-top: 20px;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+  }
 `;
 
 export default Loading;

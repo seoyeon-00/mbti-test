@@ -35,6 +35,7 @@ function Resultpage({ MBTI, setMBTI }) {
       </Title>
       <Content>{data[MBTI.join("")].content}</Content>
       <Button
+        color={`${theme.subColor}`}
         onClick={() => {
           navigate("/");
           setMBTI("");
