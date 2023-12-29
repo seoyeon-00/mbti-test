@@ -20,7 +20,7 @@ function Resultpage({ MBTI, setMBTI }) {
     return () => clearTimeout(LoadingTimeout);
   }, []);
 
-  if (loading) {
+  if (!loading) {
     return <Loading></Loading>;
   }
 
