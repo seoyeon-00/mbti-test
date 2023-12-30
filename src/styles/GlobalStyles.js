@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { fonts } from "../fonts/font";
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -6,10 +7,16 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
 
+  ${fonts}
+
   a {
       text-decoration : none;
       color : inherit;
       color: #333;
+  }
+
+  ul, li {
+    list-style: none;
   }
 
   body {

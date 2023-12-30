@@ -2,22 +2,28 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import Button from "./UI/Button";
 import theme from "../styles/theme";
+import { kakaoShare } from "../utils/kakaoShare";
 
 function Main(props) {
   let navigate = useNavigate();
+
+  console.log(process.env.REACT_APP_KAKAO_LINK_KEY);
 
   return (
     <Container>
       <TextCinainer>
         <p>너의 MBTI가 궁금해~</p>
         <h2>
-          <span className="colorPoint">MBTI</span>
-          <br /> 테스트
+          <span className="colorPoint">이모지로 보는</span>
+          <br />
+          MBTI 테스트
         </h2>
       </TextCinainer>
 
       <ImageContainer>
         <img src={"/images/emoji-happy.png"} alt="이미지" />
+        <TextBubble1>너 T야? 🤨</TextBubble1>
+        <TextBubble2>MBTI 궁금햇🩷</TextBubble2>
       </ImageContainer>
       <ButtonContainer>
         <Button
@@ -33,6 +39,32 @@ function Main(props) {
           테스트 시작하기
         </Button>
       </ButtonContainer>
+      <ShareContainer>
+        <p>MBTI 테스트 공유하기</p>
+        <ul className="share-icon">
+          <li>
+            <button
+              onClick={() =>
+                kakaoShare(
+                  "https://deploy-preview-2--funny-faloodeh-79b256.netlify.app/",
+                  "MBTI 테스트"
+                )
+              }
+            >
+              <img
+                className="w-12 h-12"
+                src={"/images/kakao.png"}
+                alt={"카카오톡 공유하기"}
+              />
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src={"/images/link.png"} alt={"링크 공유하기"} />
+            </button>
+          </li>
+        </ul>
+      </ShareContainer>
     </Container>
   );
 }
@@ -42,19 +74,15 @@ const Container = styled.div`
   height: 100vh;
   box-sizing: border-box;
 
-  padding: 100px 30px;
-
-  .colorPoint {
-    color: ${theme.subColor};
-  }
+  padding: 120px 30px;
 `;
 
 const TextCinainer = styled.div`
   text-align: center;
 
   p {
-    font-family: "Gamja Flower", sans-serif;
-    font-size: 24px;
+    font-family: "KyoboHand";
+    font-size: 28px;
     font-style: italic;
 
     animation: text1 2s forwards;
@@ -73,10 +101,11 @@ const TextCinainer = styled.div`
   }
 
   h2 {
-    font-family: "Gasoek One", sans-serif;
-    font-size: 90px;
-    line-height: 90px;
-    letter-spacing: 2px;
+    margin-top: 5px;
+    font-family: "Cafe24Moyamoya-Face-v1.0";
+    font-size: 80px;
+    line-height: 70px;
+    letter-spacing: -2px;
     font-weight: 400;
 
     animation: text2 2s 0.4s forwards;
@@ -93,20 +122,105 @@ const TextCinainer = styled.div`
       }
     }
   }
+
+  .colorPoint {
+    color: ${theme.subColor};
+    font-size: 65px;
+  }
 `;
 
 const ImageContainer = styled.div`
   margin-top: 80px;
   text-align: center;
   height: 300px;
+  position: relative;
+  font-family: "KyoboHand";
+  font-weight: 600;
+  color: #333;
 
   img {
     width: 200px;
   }
 `;
 
+const TextBubble1 = styled.div`
+  position: absolute;
+  top: 20px;
+  left: 40px;
+
+  width: 150px;
+  background: #fff;
+  padding: 9px 10px;
+  border-radius: 30px;
+  border: 2px solid #d9e9ca;
+
+  animation: bubble1 2s 0.8s forwards;
+  opacity: 0;
+  transform: translateY(10px);
+
+  @keyframes bubble1 {
+    0% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+      transform: translateY(0px);
+    }
+  }
+`;
+
+const TextBubble2 = styled.div`
+  position: absolute;
+  top: 70px;
+  right: 20px;
+
+  width: 180px;
+  background: #fff;
+  padding: 9px 10px;
+  border-radius: 30px;
+  border: 2px solid #d9e9ca;
+
+  animation: bubble2 2s 1s forwards;
+  opacity: 0;
+  transform: translateY(10px);
+
+  @keyframes bubble2 {
+    0% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+      transform: translateY(0px);
+    }
+  }
+`;
+
 const ButtonContainer = styled.div`
   margin-top: 30px;
+`;
+const ShareContainer = styled.div`
+  margin-top: 40px;
+  text-align: center;
+
+  p {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .share-icon {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  button {
+    border: none;
+    background-color: transparent;
+  }
+
+  img {
+    width: 80%;
+  }
 `;
 
 export default Main;
