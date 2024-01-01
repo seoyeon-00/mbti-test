@@ -84,6 +84,10 @@ const Container = styled.div`
   box-sizing: border-box;
 
   padding: 120px 30px;
+
+  @media screen and (max-width: 400px) {
+    padding: 120px 20px;
+  }
 `;
 
 const TextCinainer = styled.div`
@@ -106,6 +110,10 @@ const TextCinainer = styled.div`
         opacity: 100%;
         transform: translateY(0px);
       }
+    }
+
+    @media screen and (max-width: 400px) {
+      font-size: 22px;
     }
   }
 
@@ -130,11 +138,21 @@ const TextCinainer = styled.div`
         transform: translateY(0px);
       }
     }
+
+    @media screen and (max-width: 400px) {
+      margin-top: -2px;
+      font-size: 50px;
+      line-height: 45px;
+    }
   }
 
   .colorPoint {
     color: ${theme.subColor};
     font-size: 65px;
+
+    @media screen and (max-width: 400px) {
+      font-size: 44px;
+    }
   }
 `;
 
@@ -149,6 +167,13 @@ const ImageContainer = styled.div`
 
   img {
     width: 200px;
+  }
+
+  @media screen and (max-width: 400px) {
+    height: 200px;
+    img {
+      width: 180px;
+    }
   }
 `;
 
@@ -176,6 +201,14 @@ const TextBubble1 = styled.div`
       transform: translateY(0px);
     }
   }
+
+  @media screen and (max-width: 400px) {
+    top: 20px;
+    left: 10px;
+
+    width: 80px;
+    padding: 4px 7px;
+  }
 `;
 
 const TextBubble2 = styled.div`
@@ -202,6 +235,14 @@ const TextBubble2 = styled.div`
       transform: translateY(0px);
     }
   }
+
+  @media screen and (max-width: 400px) {
+    top: 50px;
+    right: 0px;
+
+    width: 120px;
+    padding: 4px 5px;
+  }
 `;
 
 const ButtonContainer = styled.div`
@@ -214,6 +255,10 @@ const ShareContainer = styled.div`
   p {
     font-size: 18px;
     font-weight: 600;
+
+    @media screen and (max-width: 400px) {
+      font-size: 15px;
+    }
   }
 
   .share-icon {
