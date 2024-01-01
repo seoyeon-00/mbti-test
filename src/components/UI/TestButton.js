@@ -19,6 +19,11 @@ const ButtonContainer = styled.button`
     transform: translateY(-3px);
     font-weight: 500;
   }
+
+  @media screen and (max-width: 420px) {
+    padding: 20px 10px;
+    font-size: 14px;
+  }
 `;
 
 export default TestButton;

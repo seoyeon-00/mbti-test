@@ -85,7 +85,7 @@ const Container = styled.div`
 
   padding: 120px 30px;
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 420px) {
     padding: 120px 20px;
   }
 `;
@@ -112,7 +112,7 @@ const TextCinainer = styled.div`
       }
     }
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 420px) {
       font-size: 22px;
     }
   }
@@ -139,7 +139,7 @@ const TextCinainer = styled.div`
       }
     }
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 420px) {
       margin-top: -2px;
       font-size: 50px;
       line-height: 45px;
@@ -150,7 +150,7 @@ const TextCinainer = styled.div`
     color: ${theme.subColor};
     font-size: 65px;
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 420px) {
       font-size: 44px;
     }
   }
@@ -169,7 +169,7 @@ const ImageContainer = styled.div`
     width: 200px;
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 420px) {
     height: 200px;
     img {
       width: 180px;
@@ -202,7 +202,7 @@ const TextBubble1 = styled.div`
     }
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 420px) {
     top: 20px;
     left: 10px;
 
@@ -236,7 +236,7 @@ const TextBubble2 = styled.div`
     }
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 420px) {
     top: 50px;
     right: 0px;
 
@@ -256,7 +256,7 @@ const ShareContainer = styled.div`
     font-size: 18px;
     font-weight: 600;
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 420px) {
       font-size: 15px;
     }
   }

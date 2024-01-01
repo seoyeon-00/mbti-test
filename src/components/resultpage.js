@@ -33,6 +33,8 @@ function Resultpage({ MBTI, setMBTI }) {
       <Title>
         당신의 유형은 <br /> {data[MBTI.join("")].title}입니다.
       </Title>
+      <Emoji>{data[MBTI.join("")].emoji}</Emoji>
+      <EmojiText>{data[MBTI.join("")].emojiDescription}</EmojiText>
       <Content>{data[MBTI.join("")].content}</Content>
       <Button
         color={`${theme.subColor}`}
@@ -59,6 +61,34 @@ const Title = styled.div`
   font-size: ${theme.fontMedium};
   font-weight: 600;
   text-align: center;
+`;
+
+const Emoji = styled.div`
+  width: 50%;
+  text-align: center;
+  margin: 30px auto 5px;
+  background-color: #fff;
+  padding: 20px 10px;
+  border-radius: 50px;
+  border: 3px solid #333;
+
+  font-size: 38px;
+
+  @media screen and (max-width: 420px) {
+    width: 60%;
+    margin: 15px auto 5px;
+    font-size: 24px;
+  }
+`;
+
+const EmojiText = styled.div`
+  font-size: 18px;
+  text-align: center;
+  font-weight: 600;
+
+  @media screen and (max-width: 420px) {
+    font-size: 14px;
+  }
 `;
 
 const Content = styled.div`

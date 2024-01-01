@@ -78,12 +78,21 @@ const Container = styled.div`
     font-size: ${theme.fontLarge};
     font-weight: 600;
     color: ${theme.subColor};
+
+    @media screen and (max-width: 420px) {
+      font-size: 24px;
+    }
   }
 
   .question {
     margin-top: 20px;
     font-size: ${theme.fontMedium};
     font-weight: 500;
+
+    @media screen and (max-width: 420px) {
+      margin-top: 5px;
+      font-size: 18px;
+    }
   }
 
   .button-box {
@@ -92,6 +101,10 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    @media screen and (max-width: 420px) {
+      margin-top: 30px;
+    }
   }
 `;
 
