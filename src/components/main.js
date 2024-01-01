@@ -7,7 +7,16 @@ import { kakaoShare } from "../utils/kakaoShare";
 function Main(props) {
   let navigate = useNavigate();
 
-  console.log(process.env.REACT_APP_KAKAO_LINK_KEY);
+  const copyClipBoard = async () => {
+    try {
+      await navigator.clipboard.writeText(
+        "https://funny-faloodeh-79b256.netlify.app/"
+      );
+      alert("클립보드에 링크가 복사되었어요.");
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <Container>
@@ -46,7 +55,7 @@ function Main(props) {
             <button
               onClick={() =>
                 kakaoShare(
-                  "https://deploy-preview-2--funny-faloodeh-79b256.netlify.app/",
+                  "https://funny-faloodeh-79b256.netlify.app/",
                   "MBTI 테스트"
                 )
               }
@@ -59,7 +68,7 @@ function Main(props) {
             </button>
           </li>
           <li>
-            <button>
+            <button onClick={() => copyClipBoard()}>
               <img src={"/images/link.png"} alt={"링크 공유하기"} />
             </button>
           </li>
@@ -216,10 +225,15 @@ const ShareContainer = styled.div`
   button {
     border: none;
     background-color: transparent;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
   }
 
   img {
-    width: 80%;
+    width: 70%;
   }
 `;
 
