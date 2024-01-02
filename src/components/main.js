@@ -74,6 +74,14 @@ function Main(props) {
           </li>
         </ul>
       </ShareContainer>
+      <FallingContent>
+        <div className="emolji">😄</div>
+        <div className="emolji">❤️</div>
+        <div className="emolji">🥹</div>
+        <div className="emolji">😍</div>
+        <div className="emolji">🩵</div>
+        <div className="emolji">🤩</div>
+      </FallingContent>
     </Container>
   );
 }
@@ -279,6 +287,103 @@ const ShareContainer = styled.div`
 
   img {
     width: 70%;
+  }
+`;
+const FallingContent = styled.div`
+  .emolji {
+    position: fixed;
+    top: -10%;
+    z-index: 9999;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+    -webkit-animation-duration: 10s, 3s;
+    -webkit-animation-timing-function: linear, ease-in-out;
+    -webkit-animation-iteration-count: infinite, infinite;
+    -webkit-animation-play-state: running, running;
+    animation-name: snowflakes-fall, snowflakes-shake;
+    animation-duration: 10s, 3s;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+    animation-play-state: running, running;
+
+    font-size: 20px;
+    opacity: 0.3;
+
+    @-webkit-keyframes snowflakes-fall {
+      0% {
+        top: -10%;
+      }
+      100% {
+        top: 100%;
+      }
+    }
+    @-webkit-keyframes snowflakes-shake {
+      0% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+      }
+      50% {
+        -webkit-transform: translateX(80px);
+        transform: translateX(80px);
+      }
+      100% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+      }
+    }
+    @keyframes snowflakes-fall {
+      0% {
+        top: -10%;
+      }
+      100% {
+        top: 100%;
+      }
+    }
+    @keyframes snowflakes-shake {
+      0% {
+        transform: translateX(0px);
+      }
+      50% {
+        transform: translateX(80px);
+      }
+      100% {
+        transform: translateX(0px);
+      }
+    }
+  }
+
+  .emolji:nth-of-type(2) {
+    left: 40%;
+    -webkit-animation-delay: 1s, 2s;
+    animation-delay: 1s, 2s;
+  }
+
+  .emolji:nth-of-type(3) {
+    left: 60%;
+    -webkit-animation-delay: 3s, 2s;
+    animation-delay: 3s, 2s;
+  }
+
+  .emolji:nth-of-type(4) {
+    left: 35%;
+    -webkit-animation-delay: 7s, 2s;
+    animation-delay: 7s, 2s;
+  }
+
+  .emolji:nth-of-type(5) {
+    right: 45%;
+    -webkit-animation-delay: 3.5s, 3s;
+    animation-delay: 3.5s, 3s;
+  }
+
+  .emolji:nth-of-type(6) {
+    left: 50%;
+    -webkit-animation-delay: 6s, 1s;
+    animation-delay: 6s, 1s;
   }
 `;
 
