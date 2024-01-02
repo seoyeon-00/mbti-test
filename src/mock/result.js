@@ -6,6 +6,16 @@ export const resultData = {
     image: "",
     emoji: "🔪+ ☕️ + 📃",
     emojiDescription: "칼 같은 성격. 라떼는 말야 철저한 계획주의자",
+    representPerson: [
+      {
+        name: "해리 S 트루먼",
+        image: "/images/estj_1.jpg",
+      },
+      {
+        name: "존 D 록펠러",
+        image: "/images/estj_2.jpg",
+      },
+    ],
   },
   ESFJ: {
     title: "ESFJ 친선도모형",
@@ -14,6 +24,16 @@ export const resultData = {
     image: "",
     emoji: "👑+ 📝 + 😇",
     emojiDescription: "감투쓰기, 계획 세우기, 남 도와주길 좋아해",
+    representPerson: [
+      {
+        name: "빌 클린턴",
+        image: "/images/esfj_1.jpg",
+      },
+      {
+        name: "데니 글로버",
+        image: "/images/esfj_2.jpg",
+      },
+    ],
   },
   ENFJ: {
     title: "ENFJ 언변능숙형",
@@ -22,6 +42,16 @@ export const resultData = {
     image: "",
     emoji: "✨+ 💸 + 💞",
     emojiDescription: "정의롭고 평화로움을 중시해. 남한테 다 퍼주는 편",
+    representPerson: [
+      {
+        name: "로날드 레이건",
+        image: "/images/enfj_1.jpg",
+      },
+      {
+        name: "아브라함 링컨",
+        image: "/images/enfj_2.jpg",
+      },
+    ],
   },
   ENTJ: {
     title: "ENTJ 지도자형",
@@ -30,6 +60,16 @@ export const resultData = {
     image: "",
     emoji: "👩‍🏫 + 🏃 + 📴",
     emojiDescription: "남 이끌어내고 진두지휘하는 스타일~ 남한테 관심 없어!",
+    representPerson: [
+      {
+        name: "빌 케이츠",
+        image: "/images/entj_1.jpg",
+      },
+      {
+        name: "우피 골드버그",
+        image: "/images/entj_2.jpg",
+      },
+    ],
   },
   ESTP: {
     title: "ESTP 활동가형",
@@ -38,6 +78,20 @@ export const resultData = {
     image: "",
     emoji: "😡 + 🔥 + 🎙",
     emojiDescription: "난 화끈하고 뒤끝 없어! 말 잘하는데 말투가 좀 셈.",
+    representPerson: [
+      {
+        name: "고갱",
+        image: "/images/estp_1.jpg",
+      },
+      {
+        name: "어니스트 헤밍웨이",
+        image: "/images/estp_2.jpg",
+      },
+      {
+        name: "잭 니콜슨",
+        image: "/images/estp_3.jpg",
+      },
+    ],
   },
   ESFP: {
     title: "ESFP 사교형",
@@ -46,6 +100,20 @@ export const resultData = {
     image: "",
     emoji: "🎉 + 🍾 + 🥳",
     emojiDescription: "하고싶은건 다 해야해. 언제나 파티는 신나!",
+    representPerson: [
+      {
+        name: "골디 혼",
+        image: "/images/esfp_1.jpg",
+      },
+      {
+        name: "밥 호프",
+        image: "/images/esfp_2.jpg",
+      },
+      {
+        name: "김경식",
+        image: "/images/esfp_3.jpg",
+      },
+    ],
   },
   ENFP: {
     title: "ENFP 스파크형",
@@ -54,6 +122,16 @@ export const resultData = {
     image: "",
     emoji: "💩 + 🌈 + 🎈",
     emojiDescription: "이 이모지를 합쳐서 인간화하면 ENFP가 됨",
+    representPerson: [
+      {
+        name: "로빈 윌리암스",
+        image: "/images/enfp_1.jpg",
+      },
+      {
+        name: "산드라 블록",
+        image: "/images/enfp_2.jpg",
+      },
+    ],
   },
   ENTP: {
     title: "ENTP 발명가형",
@@ -62,6 +140,16 @@ export const resultData = {
     image: "",
     emoji: "👑 + 📢 + 🃏",
     emojiDescription: "내가 제일 잘나가! 목소리 크고 장난을 좋아하는 개구쟁이",
+    representPerson: [
+      {
+        name: "토마스 에디슨",
+        image: "/images/entp_1.jpg",
+      },
+      {
+        name: "알프레드 히치콕",
+        image: "/images/entp_2.jpg",
+      },
+    ],
   },
   ISTJ: {
     title: "ISTJ 세상의 소금형",
@@ -70,6 +158,16 @@ export const resultData = {
     image: "",
     emoji: "✍️ + 🤖 + 🧍",
     emojiDescription: "계획대로 행동하고 아부 못함. 혼자 있을 때 제일 편해!",
+    representPerson: [
+      {
+        name: "조지 워싱턴",
+        image: "/images/istj_1.jpg",
+      },
+      {
+        name: "조지 부시",
+        image: "/images/istj_2.jpg",
+      },
+    ],
   },
   ISFJ: {
     title: "ISFJ 전통주의형",
@@ -78,6 +176,16 @@ export const resultData = {
     image: "",
     emoji: "👨‍👩‍👧‍👧 + 💞 + 🎭",
     emojiDescription: "사람을 좋아하고 배려해. 속마음 티 안내려고 함.",
+    representPerson: [
+      {
+        name: "찰스 디킨스",
+        image: "/images/isfj_1.jpg",
+      },
+      {
+        name: "마이클 조던",
+        image: "/images/isfj_2.jpg",
+      },
+    ],
   },
   INFJ: {
     title: "INFJ 예언자형",
@@ -86,6 +194,16 @@ export const resultData = {
     image: "",
     emoji: "🤝 + 🌷 + 🔭",
     emojiDescription: "감수성, 공감 능력이 풍부하고 탐색하기를 좋아해.",
+    representPerson: [
+      {
+        name: "테레사 수녀",
+        image: "/images/infj_1.jpg",
+      },
+      {
+        name: "마틴 루터 킹",
+        image: "/images/infj_2.jpg",
+      },
+    ],
   },
   INTJ: {
     title: "INTJ 과학자형",
@@ -94,6 +212,16 @@ export const resultData = {
     image: "",
     emoji: "🎯 + 🔍 + 🎢",
     emojiDescription: "하나 꽂히면 그것만 파고든다! 텐션이 왔다 갔다 함.",
+    representPerson: [
+      {
+        name: "줄리어스 시저",
+        image: "/images/intj_1.jpg",
+      },
+      {
+        name: "제인 오스틴",
+        image: "/images/intj_2.jpg",
+      },
+    ],
   },
   ISTP: {
     title: "ISTP 백과사전형",
@@ -102,6 +230,16 @@ export const resultData = {
     image: "",
     emoji: "🤷‍♀️ + 👌 + 🔫",
     emojiDescription: "어쩌라고 마인드. 간결한게 최고, 선 넘으면 죽는다.",
+    representPerson: [
+      {
+        name: "톰 크루즈",
+        image: "/images/istp_1.jpg",
+      },
+      {
+        name: "제임스 딘",
+        image: "/images/istp_2.jpg",
+      },
+    ],
   },
   ISFP: {
     title: "ISFP 성인군자형",
@@ -110,6 +248,20 @@ export const resultData = {
     image: "",
     emoji: "🏠 + 🧸 + 👍",
     emojiDescription: "집 최고. 노는 거 최고. 집에서 노는 건 더 최고야!",
+    representPerson: [
+      {
+        name: "베토벤",
+        image: "/images/isfp_1.jpg",
+      },
+      {
+        name: "마리 앙루와트",
+        image: "/images/isfp_2.jpg",
+      },
+      {
+        name: "마릴린먼로",
+        image: "/images/isfp_3.jpg",
+      },
+    ],
   },
   INFP: {
     title: "INFP 이상주의형",
@@ -118,6 +270,16 @@ export const resultData = {
     image: "",
     emoji: "💖 + 🎠 + 🖤",
     emojiDescription: "동화같이 아기자기한 마음! 하지만 깊은 곳엔 우울함",
+    representPerson: [
+      {
+        name: "윌리엄 세익스피어",
+        image: "/images/infp_1.jpg",
+      },
+      {
+        name: "헬런 켈러",
+        image: "/images/infp_2.jpg",
+      },
+    ],
   },
   INTP: {
     title: "INTP 아이디어형",
@@ -126,5 +288,15 @@ export const resultData = {
     image: "",
     emoji: "📚 + 🔬 + 🎊",
     emojiDescription: "귀찮지만 책을 좋아하며 관심분야에서만 발언 터짐",
+    representPerson: [
+      {
+        name: "아이작 뉴턴",
+        image: "/images/intp_1.jpg",
+      },
+      {
+        name: "소크라테스",
+        image: "/images/intp_2.jpg",
+      },
+    ],
   },
 };

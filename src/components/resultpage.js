@@ -5,6 +5,7 @@ import styled from "styled-components";
 import theme from "../styles/theme";
 import Loading from "./UI/Loading";
 import Button from "./UI/Button";
+import PersonImage from "./UI/PersonImage";
 
 function Resultpage({ MBTI, setMBTI }) {
   let data = resultData;
@@ -36,6 +37,14 @@ function Resultpage({ MBTI, setMBTI }) {
       <Emoji>{data[MBTI.join("")].emoji}</Emoji>
       <EmojiText>{data[MBTI.join("")].emojiDescription}</EmojiText>
       <Content>{data[MBTI.join("")].content}</Content>
+      <Person>
+        <p className="person-title">대표인물</p>
+        <div className="person-image">
+          {data[MBTI.join("")].representPerson.map((item) => (
+            <PersonImage item={item} />
+          ))}
+        </div>
+      </Person>
       <Button
         color={`${theme.subColor}`}
         onClick={() => {
@@ -58,7 +67,8 @@ const Container = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: ${theme.fontMedium};
+  font-size: 30px;
+  line-height: 36px;
   font-weight: 600;
   text-align: center;
 `;
@@ -66,13 +76,13 @@ const Title = styled.div`
 const Emoji = styled.div`
   width: 50%;
   text-align: center;
-  margin: 30px auto 5px;
+  margin: 25px auto 10px;
   background-color: #fff;
   padding: 20px 10px;
   border-radius: 50px;
-  border: 3px solid #333;
+  border: 3px solid #c7ddb5;
 
-  font-size: 38px;
+  font-size: 32px;
 
   @media screen and (max-width: 420px) {
     width: 60%;
@@ -93,13 +103,35 @@ const EmojiText = styled.div`
 
 const Content = styled.div`
   width: 100%;
-  margin-top: 20px;
+  margin-top: 25px;
   margin-bottom: 20px;
   font-size: ${theme.fontSmall};
   line-height: 26px;
   letter-spacing: 0.5px;
+  background-color: #fff;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-weight: 500;
+  box-shadow: 1px 2px 10px #cacbafab;
 
-  word-break: keep-all;
+  color: #333;
+`;
+
+const Person = styled.div`
+  margin-bottom: 20px;
+
+  .person-title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .person-image {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 15px;
+  }
 `;
 
 export default Resultpage;
